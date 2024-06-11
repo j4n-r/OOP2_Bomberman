@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-06-11T13:07:56.144Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="5YOc6D23lKq1ptUdlD0D" version="24.5.2" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-11T13:15:52.729Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="hGxwn9K0EbiYBFf5SepK" version="24.5.2" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="2758" dy="806" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3616" dy="1164" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -25,7 +25,7 @@
           <mxGeometry y="86" width="265" height="26" as="geometry" />
         </mxCell>
         <mxCell id="SvHluJgoHoBo37kigCSk-0" value="UnbreakableCell" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="SvHluJgoHoBo37kigCSk-29" vertex="1">
-          <mxGeometry x="230" y="224.5" width="230" height="80" as="geometry">
+          <mxGeometry x="240" y="250" width="230" height="80" as="geometry">
             <mxRectangle x="350" y="70" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -87,7 +87,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ht_oOcngCgunCOYZhGNy-28" value="Player" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="SvHluJgoHoBo37kigCSk-29" vertex="1">
-          <mxGeometry x="230" y="40" width="186" height="164" as="geometry">
+          <mxGeometry x="230" y="40" width="186" height="190" as="geometry">
             <mxRectangle x="350" y="70" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -171,17 +171,20 @@
         <mxCell id="SvHluJgoHoBo37kigCSk-37" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="SvHluJgoHoBo37kigCSk-33" vertex="1">
           <mxGeometry y="26" width="225" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="SvHluJgoHoBo37kigCSk-54" value="private dropBomb()" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" parent="SvHluJgoHoBo37kigCSk-33" vertex="1">
+        <mxCell id="SvHluJgoHoBo37kigCSk-54" value="public PlayerController(Player player)" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" parent="SvHluJgoHoBo37kigCSk-33" vertex="1">
           <mxGeometry y="34" width="225" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="LbmWd9VjXviLBl3tB9bs-21" value="public void keyPressed(KeyEvent e)" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="SvHluJgoHoBo37kigCSk-33">
+        <mxCell id="LbmWd9VjXviLBl3tB9bs-32" value="private dropBomb()" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="SvHluJgoHoBo37kigCSk-33">
           <mxGeometry y="60" width="225" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="LbmWd9VjXviLBl3tB9bs-22" value="public void keyReleased(KeyEvent e)" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="SvHluJgoHoBo37kigCSk-33">
+        <mxCell id="LbmWd9VjXviLBl3tB9bs-21" value="public void keyPressed(KeyEvent e)" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="SvHluJgoHoBo37kigCSk-33">
           <mxGeometry y="86" width="225" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="LbmWd9VjXviLBl3tB9bs-23" value="public void keyTyped(KeyEvent e)" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="SvHluJgoHoBo37kigCSk-33">
+        <mxCell id="LbmWd9VjXviLBl3tB9bs-22" value="public void keyReleased(KeyEvent e)" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="SvHluJgoHoBo37kigCSk-33">
           <mxGeometry y="112" width="225" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="LbmWd9VjXviLBl3tB9bs-23" value="public void keyTyped(KeyEvent e)" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="SvHluJgoHoBo37kigCSk-33">
+          <mxGeometry y="138" width="225" height="26" as="geometry" />
         </mxCell>
         <mxCell id="SvHluJgoHoBo37kigCSk-55" value="GameController" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="SvHluJgoHoBo37kigCSk-31" vertex="1">
           <mxGeometry x="125" y="300" width="185" height="258" as="geometry">
