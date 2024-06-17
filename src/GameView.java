@@ -1,4 +1,4 @@
-import java.awt.Color;
+
 import java.awt.Dimension;
 import java.awt.GridLayout;
 
@@ -64,51 +64,25 @@ public class GameView extends JFrame {
             for (int j = 0; j < MAP_WIDTH; j++) {
                 switch (layout[i][j]) {
                     case 'P': // cell where a player starts
-                        Cell cell = new Cell(i, j);
+                        Player player = new Player(i, j);
                         // set cell size,maybe pass this in the constructor
-                        cell.setPreferredSize(new Dimension(CELL_SIZE, CELL_SIZE));
-                        cellGrid[i][j] = cell;
+                        player.setPreferredSize(new Dimension(CELL_SIZE, CELL_SIZE));
+                        cellGrid[i][j] = player;
                         break;
                     case '#': // unbreakableCell
                         Cell unbreakableCell = new UnbreakableCell(i, j);
                         unbreakableCell.setPreferredSize(new Dimension(CELL_SIZE, CELL_SIZE));
-                        Border blackBorder = BorderFactory.createLineBorder(Color.BLACK, 1);
-                        unbreakableCell.setBorder(blackBorder);
-                        // laod image (maybe also move this part into the constructor)
-                        try {
-                            Icon wallIcon = new ImageIcon(getClass().getResource("/assets/images/wall.png"));
-                            unbreakableCell.setIcon(wallIcon);
-                        } catch (Exception error) {
-                            System.err.println(error);
-                            System.out.println("Image not found");
-                        }
                         cellGrid[i][j] = unbreakableCell;
                         break;
+
                     case 'V': // normal Cell
                         Cell voidCell = new Cell(i, j);
                         voidCell.setPreferredSize(new Dimension(CELL_SIZE, CELL_SIZE));
                         cellGrid[i][j] = voidCell;
-                        try {
-                            Icon grassIcon = new ImageIcon(getClass().getResource("/assets/images/grass.png"));
-                            voidCell.setIcon(grassIcon);
-                        } catch (Exception error) {
-                            System.err.println(error);
-                            System.out.println("Image not found");
-                        }
-                        voidCell.setBorder(null);
                         break;
                     case 'X': // breakableCell
                         Cell breakableCell = new BreakableCell(i, j);
                         breakableCell.setPreferredSize(new Dimension(CELL_SIZE, CELL_SIZE));
-                        breakableCell.setBackground(Color.GRAY);
-                        breakableCell.setBorder(null);
-                        try {
-                            Icon brickIcon = new ImageIcon(getClass().getResource("assets/images/brick.png"));
-                            breakableCell.setIcon(brickIcon);
-                        } catch (Exception error) {
-                            System.err.println(error);
-                            System.out.println("Image not found");
-                        }
                         cellGrid[i][j] = breakableCell;
                         break;
                 }
