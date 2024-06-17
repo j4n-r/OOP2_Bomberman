@@ -2,20 +2,17 @@
 import java.awt.Dimension;
 import java.awt.GridLayout;
 
-import javax.swing.BorderFactory;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.border.Border;
 
 public class GameView extends JFrame {
     // set the grid width and height
     private static final int MAP_WIDTH = 15;
     private static final int MAP_HEIGHT = 15;
     // set the zell size in px
-    private static final int CELL_SIZE = 40;
+    private static final int CELL_SIZE = 32;
     private Cell[][] cellGrid;
+    private JPanel mapPanel;
 
     public GameView() {
         setTitle("Bomberman");
@@ -26,7 +23,7 @@ public class GameView extends JFrame {
         // initialize 2D array
         cellGrid = new Cell[MAP_HEIGHT][MAP_WIDTH];
 
-        JPanel mapPanel = new JPanel();
+        mapPanel = new JPanel();
         // set layout based on number of cells
         mapPanel.setLayout(new GridLayout(MAP_HEIGHT, MAP_WIDTH));
 
@@ -90,5 +87,25 @@ public class GameView extends JFrame {
                 mapPanel.add(cellGrid[i][j]);
             }
         }
+    }
+
+    public static int getMapWidth() {
+        return MAP_WIDTH;
+    }
+
+    public static int getMapHeight() {
+        return MAP_HEIGHT;
+    }
+
+    public static int getCellSize() {
+        return CELL_SIZE;
+    }
+
+    public Cell[][] getCellGrid() {
+        return cellGrid;
+    }
+
+    public JPanel getMapPanel() {
+        return mapPanel;
     }
 }
