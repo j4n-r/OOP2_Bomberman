@@ -57,11 +57,14 @@ public class GameView extends JFrame {
         };
 
         // loop to populate the cellGrid based on the layut
+        int playerNumber = 0;
         for (int i = 0; i < MAP_HEIGHT; i++) {
             for (int j = 0; j < MAP_WIDTH; j++) {
                 switch (layout[i][j]) {
                     case 'P': // cell where a player starts
-                        Player player = new Player(i, j);
+                        Player player = new Player(i, j,playerNumber);
+                        new PlayerController(player);
+                        playerNumber++;
                         // set cell size,maybe pass this in the constructor
                         player.setPreferredSize(new Dimension(CELL_SIZE, CELL_SIZE));
                         cellGrid[i][j] = player;
