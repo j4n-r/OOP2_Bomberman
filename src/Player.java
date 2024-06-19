@@ -4,13 +4,11 @@ import javax.swing.ImageIcon;
 public class Player extends Cell {
     private int xPos;
     private int yPos;
-    private int playerNumber;
 
-    public Player(int xPos, int yPos, int playerNumber) {
+    public Player(int xPos, int yPos) {
         super(xPos, yPos);
         this.xPos = xPos;
         this.yPos = yPos;
-        this.playerNumber = playerNumber;
 
         try {
             Icon brickIcon = new ImageIcon(getClass().getResource("assets/images/playerIcon.png"));
@@ -37,7 +35,4 @@ public class Player extends Cell {
         this.yPos = yPos;
     }
 
-    public int getPlayerNumber() {
-        return playerNumber;
-    }
 }

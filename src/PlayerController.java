@@ -4,10 +4,12 @@ import java.util.HashMap;
 
 public class PlayerController implements KeyListener {
     Player player;
-    HashMap<String,Integer> player1Controls = new HashMap<>();
-    HashMap<String,Integer> player2Controls = new HashMap<>();
-    public PlayerController(Player player) {
-        this.player = player;
+    HashMap<String, Integer> player1Controls = new HashMap<>();
+    HashMap<String, Integer> player2Controls = new HashMap<>();
+    Player player1;
+    Player player2;
+
+    public PlayerController(Player player1, Player player2) {
         // Initialize player1Controls
         player1Controls.put("move_left", KeyEvent.VK_A);
         player1Controls.put("move_right", KeyEvent.VK_D);
@@ -27,44 +29,34 @@ public class PlayerController implements KeyListener {
         int keyCode = e.getKeyCode();
         // Handle key pressed event
         // Handle player 1 controls
-        if (player.getPlayerNumber() == 1) {
-            // TODO change the cell array to the new player position
-            switch (keyCode) {
-                case KeyEvent.VK_A:
-                    System.out.println("Player 1: Move left");
-                    break;
-                case KeyEvent.VK_D:
-                    System.out.println("Player 1: Move right");
-                    break;
-                case KeyEvent.VK_W:
-                    System.out.println("Player 1: Move up");
-                    break;
-                case KeyEvent.VK_S:
-                    System.out.println("Player 1: Move down");
-                    break;
-            }
-        }
-
         // TODO change the cell array to the new player position
-        if (player.getPlayerNumber() == 2) {
-            // Handle player 2 controls
-            switch (keyCode) {
-                case KeyEvent.VK_LEFT:
-                    System.out.println("Player 2: Move left");
-                    break;
-                case KeyEvent.VK_RIGHT:
-                    System.out.println("Player 2: Move right");
-                    break;
-                case KeyEvent.VK_UP:
-                    System.out.println("Player 2: Move up");
-                    break;
-                case KeyEvent.VK_DOWN:
-                    System.out.println("Player 2: Move down");
-                    break;
-            }
+        switch (keyCode) {
+            case KeyEvent.VK_A:
+                System.out.println("Player 1: Move left");
+                break;
+            case KeyEvent.VK_D:
+                System.out.println("Player 1: Move right");
+                break;
+            case KeyEvent.VK_W:
+                System.out.println("Player 1: Move up");
+                break;
+            case KeyEvent.VK_S:
+                System.out.println("Player 1: Move down");
+                break;
+            case KeyEvent.VK_LEFT:
+                System.out.println("Player 2: Move left");
+                break;
+            case KeyEvent.VK_RIGHT:
+                System.out.println("Player 2: Move right");
+                break;
+            case KeyEvent.VK_UP:
+                System.out.println("Player 2: Move up");
+                break;
+            case KeyEvent.VK_DOWN:
+                System.out.println("Player 2: Move down");
+                break;
         }
-        }
-
+    }
 
     // Implement the keyReleased method
     @Override
