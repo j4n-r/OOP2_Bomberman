@@ -32,7 +32,7 @@ public class GameController implements Runnable {
 
             if (delta >= 1) {
 
-                System.out.println("Game Loop is running");
+                // System.out.println("Game Loop is running");
                 repaint();
                 delta--;
             }
@@ -46,7 +46,7 @@ public class GameController implements Runnable {
     }
 
     private void repaint() {
-        gameView.getMapPanel().repaint();
+        System.out.println("repaint");
     }
 
 }
